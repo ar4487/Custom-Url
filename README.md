@@ -1,29 +1,30 @@
-# Custom URL Shortener
+# 🔗 Custom URL Shortener
 
-A secure and user-friendly URL shortener application built with Node.js, Express, and MongoDB.
+A simple and clean URL shortening service built using **Node.js**, **Express**, and **MongoDB**. Generate short links and redirect to long URLs — like Bitly or TinyURL.
 
-## Features
+## 🚀 Features
 
-- User authentication with JWT
-- Create custom shortened URLs
-- URL expiration (5 minutes by default)
-- Track URL visits and analytics
-- Delete URLs
-- Responsive design
-- Latest URLs shown first
+- Shorten long URLs with a unique code
+- Redirect users via the short code
+- MongoDB integration via Mongoose
+- Environment-based configuration
+- Clean and modular project structure
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - Node.js
 - Express.js
-- MongoDB
-- EJS (Template Engine)
-- JWT for authentication
-- Nanoid for URL generation
+- MongoDB + Mongoose
+- Shortid
+- dotenv
 
-## Prerequisites
+## 📦 Setup Instructions
 
-- Node.js (v14 or higher)
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/ar4487/Custom-Url.git
+   cd Custom-Url
+
 - MongoDB
 - npm or yarn
 
