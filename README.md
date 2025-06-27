@@ -10,6 +10,23 @@ A simple and clean URL shortening service built using **Node.js**, **Express**, 
 - Environment-based configuration
 - Clean and modular project structure
 
+# 🔗 Custom URL Shortener
+
+A clean and simple URL shortening service built using **Node.js**, **Express**, and **MongoDB**. Like Bitly or TinyURL, this app allows users to shorten long URLs into compact, easily shareable links.
+
+---
+
+## 🚀 Features
+
+- Shortens any valid long URL
+- Generates a unique shortcode using `shortid`
+- Redirects to the original URL via the short link
+- MongoDB integration using Mongoose
+- Environment-based configuration using `dotenv`
+- Clean, modular codebase
+
+---
+
 ## 🛠️ Tech Stack
 
 - Node.js
@@ -18,22 +35,18 @@ A simple and clean URL shortening service built using **Node.js**, **Express**, 
 - Shortid
 - dotenv
 
+---
+
 ## 📦 Setup Instructions
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/ar4487/Custom-Url.git
-   cd Custom-Url
+> 👇 These steps are only for someone who wants to run this project locally
 
-- MongoDB
-- npm or yarn
+### 1. Clone the Repository
 
-## Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/custom-url-shortener.git
-cd custom-url-shortener
+git clone https://github.com/ar4487/Custom-Url.git
+cd Custom-Url
+
 ```
 
 2. Install dependencies:
@@ -41,7 +54,10 @@ cd custom-url-shortener
 npm install
 ```
 
-3. Start MongoDB service
+3. Start MongoDB
+servicePORT=5000
+MONGO_URI=your_mongodb_connection_string
+BASE_URL=http://localhost:5000
 
 4. Start the application:
 ```bash
@@ -72,6 +88,31 @@ The application will be available at `http://localhost:3000`
 - HTTP-only cookies
 - URL expiration
 - User-specific URL management
+
+## Sample Request & Response
+- Request Body
+ {
+  "longUrl": "https://www.google.com"
+}
+- Response
+{
+  "shortUrl": "http://localhost:5000/abc123",
+  "longUrl": "https://www.google.com",
+  "urlCode": "abc123"
+}
+
+## Folder Structure
+.
+├── config          # MongoDB connection logic
+├── controllers     # URL shortener logic
+├── models          # MongoDB schema
+├── routes          # API routes
+├── server.js       # App entry point
+
+## 🙌 Author
+
+**Arpit Bhadoria**  
+🔗 [GitHub Profile](https://github.com/ar4487)
 
 ## Contributing
 
